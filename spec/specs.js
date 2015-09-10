@@ -15,7 +15,11 @@ describe('romanate', function() {
     expect(romanate(1667)).to.equal("MDCLXVII");
   });
 
-  it("converts a number ending in 9 to its roman numeral form", function() {
+  it("converts a number with 9 to its roman numeral form", function() {
     expect(romanate(1929)).to.equal("MCMXXIX");
+  });
+
+  it("converts a number with 4 to its roman numeral form", function() {
+    expect(romanate(1924)).to.equal("MCMXXIV");
   });
 });
