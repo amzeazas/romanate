@@ -46,6 +46,8 @@ $(document).ready(function() {
     var number = parseInt($("input#number").val());
     var result = romanate(number);
 
+    $("#gladiator").hide();
+
     $(".input").text(number);
     $(".output").text(result);
 
