@@ -21,12 +21,20 @@ var key = {
 var romanate = function(number) {
   var output = "";
   while (number > 0) {
-    for (var counter = 7; counter > 0; counter--) {
+    var counter = 7;
+    for (; counter > 0; counter--) {
       if (number >= key[counter]) {
         output = output + hashRomanNumerals[key[counter]];
         number = number - key[counter];
+        counter = 7;
       }
     }
   }
+  output = output.replace("DCCCC", "CM");
+  output = output.replace("CCCC", "CD");
+  output = output.replace("LXXXX", "XC");
+  output = output.replace("XXXX", "XL");
+  output = output.replace("VIIII","IX");
+  output = output.replace("IIII","IV");
   return output;
 };

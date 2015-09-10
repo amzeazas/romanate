@@ -14,4 +14,8 @@ describe('romanate', function() {
   it("converts a quadruple-digit number to its roman numeral form", function() {
     expect(romanate(1667)).to.equal("MDCLXVII");
   });
+
+  it("converts a number ending in 9 to its roman numeral form", function() {
+    expect(romanate(1929)).to.equal("MCMXXIX");
+  });
 });
