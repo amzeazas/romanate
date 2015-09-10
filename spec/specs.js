@@ -10,4 +10,8 @@ describe('romanate', function() {
   it("converts a triple-digit number to its roman numeral form", function() {
     expect(romanate(112)).to.equal("CXII");
   });
+
+  it("converts a quadruple-digit number to its roman numeral form", function() {
+    expect(romanate(1667)).to.equal("MDCLXVII");
+  });
 });
