@@ -1,0 +1,16 @@
+#result {
+  display: none;
+}
+body {
+  margin: 10px;
+}
+#gladiator {
+  display: none;
+}
+#gif {
+  cursor: pointer;
+  color: #7a1e99;
+}
+#gif:hover {
+  text-decoration: underline;
+}

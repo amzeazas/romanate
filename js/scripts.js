@@ -30,6 +30,8 @@ var romanate = function(number) {
       }
     }
   }
+  output = output.replace("DDDD", "MM");
+  output = output.replace("DD", "M");
   output = output.replace("DCCCC", "CM");
   output = output.replace("CCCC", "CD");
   output = output.replace("LXXXX", "XC");
@@ -38,3 +40,20 @@ var romanate = function(number) {
   output = output.replace("IIII","IV");
   return output;
 };
+
+$(document).ready(function() {
+  $("form#romanate").submit(function(event) {
+    var number = parseInt($("input#number").val());
+    var result = romanate(number);
+
+    $(".input").text(number);
+    $(".output").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+
+  $("#gif").click(function() {
+    $("#gladiator").toggle();
+  });
+});
